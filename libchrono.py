@@ -296,15 +296,7 @@ def kvlm_parse(raw, start=0, dct=None):
     spc = raw.find(b' ', start)
     nl = raw.find(b'\n', start)
 
-    # If space appears before newline, we have a keyword.  Otherwise,
-    # it's the final message, which we just read to the end of the file.
 
-    # Base case
-    # =========
-    # If newline appears first (or there's no space at all, in which
-    # case find returns -1), we assume a blank line.  A blank line
-    # means the remainder of the data is the message.  We store it in
-    # the dictionary, with None as the key, and return.
     if (spc < 0) or (nl < spc):
         assert nl == start
         dct[None] = raw[start+1:]
