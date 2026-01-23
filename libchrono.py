@@ -281,4 +281,3 @@ def object_hash(fd, fmt, repo=None):
         case _         : raise Exception(f"Unknown type {fmt}!")
 
     return object_write(obj, repo)
-
