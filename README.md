@@ -1,10 +1,8 @@
 # Chrono
-
 Chrono is a **from-scratch implementation of a Git-like version control system**, written in Python, with a focus on **understanding and rebuilding Git internals** rather than wrapping existing Git tooling.
 
 The project reimplements Git’s core data model — repositories, objects, commits, and history traversal — by closely following Git’s on-disk formats and invariants. Chrono is designed as a **learning-oriented but technically faithful** system that demonstrates how Git actually works under the hood.
 
----
 
 ## Motivation
 
