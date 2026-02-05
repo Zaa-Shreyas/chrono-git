@@ -341,8 +341,7 @@ class GitCommit(GitObject):
     
     def init(self):
         self.kvlm = dict()
-
-    
+   
 argsp.add_arguement(
     "commit",
     default="HEAD",
