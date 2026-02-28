@@ -386,3 +386,5 @@ def log_graphviz(repo, sha, seen):
         print (f"  c_{sha} -> c_{p};")
         log_graphviz(repo, p, seen)
     
+
+    
