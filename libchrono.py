@@ -137,16 +137,16 @@ def repo_default_config():
 
     return ret
 
-argsp = argsubparsers.add_parser("init", help="Initialize a new, empty repository.")
+argsp_init = argsubparsers.add_parser("init", help="Initialize a new, empty repository.")
 
-argsp = argsubparsers.add_parser("log", help="Display history of a given commit.")
+argsp_log = argsubparsers.add_parser("log", help="Display history of a given commit.")
 
-argsp.add_argument("commit",
-                   default="HEAD",
-                   nargs="?",
-                   help="Commit to start at.")
+argsp_log.add_argument("commit",
+                       default="HEAD",
+                       nargs="?",
+                       help="Commit to start at.")
 
-argsp.add_argument("path", metavar = "directory", nargs="?", default=".", help="Where to create the repository.")
+argsp_init.add_argument("path", metavar = "directory", nargs="?", default=".", help="Where to create the repository.")
 
 def cmd_init(args):
     repo_create(args.path)
